@@ -1,0 +1,422 @@
+{
+  "title": "DOCKER SWARM",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "3": {
+      "title": "CA Server",
+      "id": 11,
+      "ideas": {
+        "1": {
+          "title": "trust is established by installing the CA's root certificate on the host running the Engine daemon.",
+          "id": 4,
+          "ideas": {
+            "1": {
+              "title": "WTF is CA  ROOT Certificate?",
+              "id": 5,
+              "ideas": {
+                "1": {
+                  "title": "ca.pem",
+                  "id": 78,
+                  "ideas": {}
+                },
+                "2": {
+                  "title": "ca.cert",
+                  "id": 80
+                },
+                "3": {
+                  "title": "ca-cert.pem",
+                  "id": 81,
+                  "ideas": {}
+                },
+                "4": {
+                  "title": "And so on, many names, but in the end its just a Certificate Authority public key.",
+                  "id": 83,
+                  "attr": {
+                    "style": {
+                      "background": "#99cc00"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "Signs and issues  a certificate for Engine CLI client",
+          "id": 6,
+          "attr": {
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "ca signed certificate",
+          "id": 3,
+          "attr": {
+            "style": {}
+          }
+        },
+        "13": {
+          "title": "ca certificate",
+          "id": 2,
+          "attr": {
+            "style": {},
+            "position": [
+              77,
+              199,
+              1
+            ]
+          }
+        }
+      },
+      "attr": {
+        "position": [
+          8,
+          270.5,
+          1
+        ],
+        "style": {}
+      }
+    },
+    "4": {
+      "title": "TLS Modes with Docker and Swarm",
+      "id": 23,
+      "ideas": {
+        "1": {
+          "title": "External 3rd party CA",
+          "id": 24,
+          "ideas": {
+            "1": {
+              "title": "Trusted  3rd Party",
+              "id": 27
+            },
+            "2": {
+              "title": "Manages certificates",
+              "id": 28
+            },
+            "3": {
+              "title": "Normally not free",
+              "id": 29
+            }
+          }
+        },
+        "2": {
+          "title": "Internal corporate CA",
+          "id": 25,
+          "ideas": {
+            "1": {
+              "title": "CA and PKI",
+              "id": 30
+            },
+            "2": {
+              "title": "OpenSSL and Microsoft Active Directory",
+              "id": 31
+            },
+            "3": {
+              "title": "More control over PKI",
+              "id": 32
+            },
+            "4": {
+              "title": "Required to provide all the same services as External 3rd party CA",
+              "id": 33
+            },
+            "5": {
+              "title": "Highly scalable and secure",
+              "id": 34
+            }
+          }
+        },
+        "3": {
+          "title": "Self-signed certificates",
+          "id": 26,
+          "ideas": {
+            "1": {
+              "title": "Signed with own private key",
+              "id": 35
+            },
+            "2": {
+              "title": "Low cost and simple",
+              "id": 36
+            },
+            "3": {
+              "title": "Better than using nothing",
+              "id": 37
+            },
+            "4": {
+              "title": "Do not scale well",
+              "id": 38
+            },
+            "5": {
+              "title": "Non-revokable",
+              "id": 39
+            },
+            "6": {
+              "title": "Less secure than other two options",
+              "id": 40
+            },
+            "7": {
+              "title": "Not recommended for production exposed to untrusted networks",
+              "id": 41
+            }
+          }
+        }
+      }
+    },
+    "5": {
+      "title": "Client",
+      "id": 42,
+      "ideas": {
+        "1": {
+          "title": "Has a copy of CA certificate",
+          "id": 45,
+          "ideas": {}
+        },
+        "2": {
+          "title": "Has own key-pair signed by the CA",
+          "id": 46,
+          "ideas": {}
+        }
+      }
+    },
+    "15": {
+      "title": "Swarm",
+      "id": 43,
+      "ideas": {
+        "1": {
+          "title": "Has a copy of CA certificate",
+          "id": 47,
+          "attr": {
+            "style": {}
+          },
+          "ideas": {}
+        },
+        "2": {
+          "title": "Has own key-pair signed by the CA",
+          "id": 48,
+          "attr": {
+            "style": {}
+          },
+          "ideas": {}
+        }
+      }
+    },
+    "25": {
+      "title": "Nodes",
+      "id": 44,
+      "ideas": {
+        "2": {
+          "title": "Has a copy of CA certificate",
+          "attr": {
+            "style": {}
+          },
+          "id": 50
+        },
+        "12": {
+          "title": "Has own key-pair signed by the CA",
+          "id": 49,
+          "attr": {
+            "style": {}
+          }
+        }
+      }
+    },
+    "-1": {
+      "title": "Docker Engine",
+      "id": 12
+    },
+    "-11": {
+      "title": "Docker Engine CLI",
+      "id": 13,
+      "attr": {
+        "position": [
+          182,
+          88.5,
+          2
+        ],
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "Requests  Certificate from the CA Server",
+          "id": 15,
+          "ideas": {
+            "1": {
+              "title": "CA Server signs the certificate and issues it to the client",
+              "id": 16,
+              "ideas": {
+                "1": {
+                  "title": "Engine CLI sends its certificate to the Engine daemon before issuing commands.",
+                  "id": 17,
+                  "ideas": {
+                    "1": {
+                      "title": "Daemon inspects the certificate and because of trust to CA the daemon trusts every certificate signed by CA",
+                      "id": 18,
+                      "ideas": {
+                        "1": {
+                          "title": "Engine daemon accepts commands from this trusted Engine CLI",
+                          "id": 19
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "2": {
+          "title": "Is a client that uses the Docker Remote API to communicate with the Engine daemon",
+          "id": 20
+        },
+        "3": {
+          "title": "There is also Docker Universal Control Plane (UCP)",
+          "id": 21
+        },
+        "4": {
+          "title": "Any client that supports Docker Remote API can communicate with the Docker engine",
+          "id": 22
+        }
+      }
+    },
+    "-12": {
+      "title": "Files and possible names",
+      "id": 51,
+      "ideas": {
+        "1": {
+          "title": "ca.pem ",
+          "id": 52,
+          "ideas": {
+            "2": {
+              "title": "The CA's public key (Certificate). This is installed on all nodes",
+              "id": 58,
+              "attr": {
+                "style": {}
+              }
+            }
+          }
+        },
+        "2": {
+          "title": "client-cert.pem",
+          "id": 53,
+          "ideas": {
+            "1": {
+              "title": "cert.pem",
+              "id": 54,
+              "ideas": {
+                "1": {
+                  "title": "A certificate signed by the CA. Together with the key.pem this makes up a key-pair",
+                  "id": 65
+                }
+              }
+            }
+          }
+        },
+        "3": {
+          "title": "client-priv-key.pem",
+          "id": 55,
+          "ideas": {
+            "1": {
+              "title": "key.pem",
+              "id": 56,
+              "ideas": {
+                "1": {
+                  "title": "A private key signed by the CA. Used to authenticate with remote Docker Engines. Together with cert.pem it makes up a key-pair",
+                  "id": 64
+                }
+              }
+            }
+          }
+        },
+        "4": {
+          "title": "ca-priv-key.pem",
+          "id": 59,
+          "ideas": {
+            "1": {
+              "title": "ca-key.pem",
+              "id": 60,
+              "ideas": {
+                "1": {
+                  "title": "The CA's private key  which is used to sign new keys for the other nodes in the environment",
+                  "id": 61
+                }
+              }
+            }
+          }
+        },
+        "5": {
+          "title": "client.csr",
+          "id": 62,
+          "ideas": {
+            "1": {
+              "title": "A certificate signing request (CSR) - application to the CA to create a new key pair for a particular client",
+              "id": 63
+            }
+          }
+        }
+      }
+    },
+    "-13": {
+      "title": "Creating keys",
+      "id": 66
+    },
+    "-14": {
+      "title": "Signing keys",
+      "id": 67,
+      "ideas": {
+        "1": {
+          "title": "Generate a CSR",
+          "id": 73,
+          "ideas": {
+            "1": {
+              "title": "openssl req -subj \"/CN=client_name\" -new -key client-priv-key.pem -out client.csr",
+              "id": 74
+            }
+          }
+        },
+        "2": {
+          "title": "Create a CERT based on the CSR",
+          "id": 75,
+          "ideas": {
+            "1": {
+              "title": "openssl x509 -req -days 1825 -in client.csr -CA ca.pem -CAkey ca-priv-key.pem -CAcreateserial -out client-cert.pem -extensions v3_req -extfile /etc/ssl/openssl.cnf\n\nopenssl rsa -in client-priv-key.pem -out client-priv-key.pem",
+              "id": 77
+            }
+          }
+        }
+      }
+    },
+    "-24": {
+      "title": "Inspect key",
+      "id": 68,
+      "ideas": {
+        "1": {
+          "title": "Private key",
+          "id": 69,
+          "ideas": {
+            "1": {
+              "title": "openssl rsa -in <key-name> -noout -text",
+              "id": 70
+            }
+          }
+        },
+        "2": {
+          "title": "Public key",
+          "id": 71,
+          "ideas": {
+            "1": {
+              "title": "openssl x509 -in <key-name> -noout -text",
+              "id": 72
+            }
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {
+    "style": {}
+  }
+}
