@@ -1,0 +1,13 @@
+{
+  "title": "RUST",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {},
+  "attr": {
+    "customCSS": "@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);\n\n.mapjs-node {\n    border: none;\n    border-width: 0;\n    border-color: transparent;\n    background-color: white;\n    border-style: none;\n    font-weight: normal;\n    box-shadow: none;\n    font-family: Roboto, 'sans-serif';\n    font-size: 20px;\n    font-weight: normal;\n}\n\n.mapjs-node[mapjs-level=\"1\"] {\n    font-size: 60px;\n    font-weight: 300;\n}\n\n.mapjs-node[mapjs-level=\"2\"] {\n    font-size: 50px;\n    font-weight: 300;\n}\n\n.mapjs-node[mapjs-level=\"3\"] {\n    font-size: 43px;\n    font-weight: 300;\n}\n\n.mapjs-node[mapjs-level=\"4\"] {\n    font-size: 32px;\n    font-weight: 300;\n}",
+    "style": {
+      "background": "#ffffff"
+    }
+  },
+  "links": []
+}
