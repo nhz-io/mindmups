@@ -197,45 +197,18 @@
         "5.125": {
           "title": "Explicit Mutability declaration",
           "id": 37,
-          "ideas": {
-            "1": {
-              "title": "let mut x = 5;\nx = 10;",
-              "id": 35,
-              "attr": {
-                "style": {
-                  "background": "#000000"
-                },
-                "position": [
-                  321.8125,
-                  -3.90625,
-                  1
-                ]
-              },
-              "ideas": {
-                "1": {
-                  "title": "Explicit declaration with mut",
-                  "id": 36,
-                  "attr": {
-                    "style": {
-                      "background": "#ffff99"
-                    },
-                    "position": [
-                      304.6875,
-                      -59.421874999997726,
-                      1
-                    ]
-                  }
-                }
-              }
-            }
-          },
+          "ideas": {},
           "attr": {
             "style": {},
             "position": [
-              919.523229382,
-              836.4999999999992,
-              23
-            ]
+              882.507604382,
+              1130.0312499999995,
+              26
+            ],
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<div style=\"text-align: left;\"><div>// Explicit declaration of mutable x</div><div>let mut x = 5;</div><div>x = 10;</div></div>"
+            }
           }
         },
         "4.09375": {
@@ -290,6 +263,18 @@
               341.2419793820002,
               635.3281249999992,
               24
+            ],
+            "style": {}
+          }
+        },
+        "4.6171875": {
+          "title": "Valid in the scope of the definition block",
+          "id": 39,
+          "attr": {
+            "position": [
+              342.3357293820002,
+              973.7812499999997,
+              25
             ],
             "style": {}
           }
